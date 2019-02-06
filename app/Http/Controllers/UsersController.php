@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\User;
 
-class PostsController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +13,9 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    
-    {   $posts=Post::all();
-        return view('posts.index') ->with('posts',$posts);
+    {
+        $users=  User::all();
+        return view('users.index')->with('users',$users);
     }
 
     /**
@@ -47,7 +47,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        return Post::find($id);
+        //
     }
 
     /**
