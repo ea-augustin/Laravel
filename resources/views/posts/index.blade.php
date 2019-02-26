@@ -6,8 +6,10 @@
    @foreach($posts as $post)
    <div class="card card-body bg-light">
    <h3><a href="/newProjet/laravel2/public/posts/{{$post->id}}">{{$post->title}}</a></h3>
-   
+    <hr>
+   <small>Written on {{$post->created_at}}</small>
    </div>
+  
    
    @endforeach
    @else

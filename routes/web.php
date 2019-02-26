@@ -19,6 +19,8 @@ Route::get('/services', 'PagesController@services');
 
   Route::resource('users','UsersController');
   Route::resource('posts','PostsController');
+  
+  Route::get('users/{user}/destroy', 'UserController@destroyForm');
     /*
         Route::get('/', function () {
             return view('welcome');
